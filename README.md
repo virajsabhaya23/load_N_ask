@@ -2,7 +2,7 @@
 
 This is a Streamlit app that uses OpenAI's API to answer questions about your PDF file. 
 
-<img width="768" alt="Screenshot 2023-05-07 at 15 19 31" src="https://user-images.githubusercontent.com/77448246/236703411-9b14cbc8-de57-4160-9254-d05cf5e65fd1.png">
+<img width="675" alt="Screenshot 2023-05-07 at 15 19 31" src="https://user-images.githubusercontent.com/77448246/236704768-045a8a20-b1c2-47b6-8dd0-ddecf1d48fb7.png">
 
 The app consists of the following main components:
 
