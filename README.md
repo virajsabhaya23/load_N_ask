@@ -27,7 +27,7 @@ The following packages are required to run this app:
 To install these packages, you can run:
 
 ```
-pip install streamlit PyPDF2 langchain faiss openai
+pip install -r requirements.txt
 ```
 
 ## How to use
