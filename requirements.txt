@@ -1,3 +1,5 @@
 langchain
 faiss-cpu
 pypdf2
+streamlit-chat
+requests
