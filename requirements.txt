@@ -4,3 +4,4 @@ pypdf2
 streamlit-chat
 requests
 openai
+tiktoken
