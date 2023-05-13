@@ -2,14 +2,12 @@
 
 This is a Streamlit app that uses OpenAI's API to answer questions about your PDF file. 
 
-<img width="675" alt="Screenshot 2023-05-07 at 15 19 31" src="https://user-images.githubusercontent.com/77448246/236704768-045a8a20-b1c2-47b6-8dd0-ddecf1d48fb7.png">
+<img width="420" height="100%" alt="Screenshot 2023-05-07 at 15 19 31" src="https://user-images.githubusercontent.com/77448246/236704768-045a8a20-b1c2-47b6-8dd0-ddecf1d48fb7.png">
 
-The app consists of the following main components:
-
-- **PDF file uploader**: Upload your PDF file here.
-- **OpenAI API key input**: Enter your OpenAI API key to use the OpenAI API for answering questions.
-- **Ask a question**: Type your question here and the app will search for the answer in the uploaded PDF using the OpenAI API.
-- **Past questions and answers**: This section displays the previously asked questions and their corresponding answers.
+## TODOs:
+- [ ] Implement support for docx, and txt files
+- [ ] Able to provide source for the answer provided
+- [ ] Implement OpenSource AI API as another option model, apart from GPT 3.5
 
 ## Requirements
 
@@ -23,6 +21,7 @@ The following packages are required to run this app:
 - openai
 - tiktoken
 - requests
+- docx2txt
 
 To install these packages, you can run:
 
@@ -34,8 +33,8 @@ pip install -r requirements.txt
 
 To use this app, follow these steps:
 
-1. Upload your PDF file.
-2. Enter your OpenAI API key.
+1. Enter your OpenAI API key.
+2. Upload your PDF file.
 3. Ask your question about the PDF file.
 
 The app will then search for the answer to your question in the uploaded PDF file using the OpenAI API. The answer will be displayed in the "Past questions and answers" section.
