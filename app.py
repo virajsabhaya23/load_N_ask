@@ -100,7 +100,13 @@ def main():
 
     # get API key from USER
     st.write('### 1. Enter your OpenAI API key')
-    OPENAI_API_KEY = st.text_input(label="", type='password', placeholder="sk-abcdefghi...", label_visibility="collapsed")
+    OPENAI_API_KEY = st.text_input(
+        help="You can get your API key from https://platform.openai.com/account/api-keys.",
+        label="WARNING: API key is only free for first 3 months! check OpenAI's policy for upgraded guidlines.",
+        type='password',
+        placeholder="sk-abcdefghi...",
+        # label_visibility="collapsed"
+    )
     os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
     # Upload PDF file
