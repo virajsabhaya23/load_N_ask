@@ -5,5 +5,3 @@ streamlit-chat
 requests
 openai
 tiktoken
-docx2txt
-csv
