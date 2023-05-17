@@ -1,4 +1,5 @@
 from PyPDF2 import PdfReader
+import csv
 
 def read_pdf(userFile):
     """
@@ -12,5 +13,15 @@ def read_pdf(userFile):
         text += page.extract_text()
     return text
 
-def read_csv():
-    pass
+def read_csv(userFile):
+    """
+        Reads a CSV file and extracts its text
+        :param userFile: CSV file uploaded by user
+        :return: text extracted from CSV file
+    """
+    text = ""
+    with open(userFile.name, newline='') as csvfile:
+        csvreader = csv.reader(csvfile, delimiter=',')
+        for row in csvreader:
+            text += row[0]
+    return text

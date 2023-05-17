@@ -60,18 +60,20 @@ def main():
     os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
     # get the option from user what file they are importing
-    st.write('### 1.5. Select the type of file you are uploading')
+    st.write('### 2. a) Select the type of file you are uploading | ⚠️csv file type is work-in-progress')
     file_type = st.selectbox(
         "Select the type of file you are uploading",
         ("PDF", "CSV")
     )
 
     # Upload PDF file
-    st.write(f'### 2. Upload your {file_type} file')
+    st.write(f'### 2. b) Upload your {file_type} file')
     if file_type.lower().endswith('pdf'):
-        uploaded_file = st.file_uploader('Upload your PDF file', type=['pdf'], label_visibility="collapsed")
+        # uploaded_file = st.file_uploader('Upload your PDF file', type=['pdf'], label_visibility="collapsed")
+        st.write(uploaded_file)
     elif file_type.lower().endswith('csv'):
-        uploaded_file = st.file_uploader('Upload your CSV file', type=['csv'], label_visibility="collapsed")
+        # uploaded_file = st.file_uploader('Upload your CSV file', type=['csv'], label_visibility="collapsed")
+        st.write(uploaded_file)
     else:
         uploaded_file = None
 
@@ -80,7 +82,9 @@ def main():
         if uploaded_file.name.endswith('.pdf'):
             text = read_pdf(uploaded_file)
         elif uploaded_file.name.endswith('.csv'):
-            agent = create_csv_agent(OpenAI(temperature=0), uploaded_file.name, verbose=True)
+            st.write(text)
+            agent = create_csv_agent(OpenAI(openai_api_key=OPENAI_API_KEY,temperature=0), uploaded_file.name, verbose=True)
+            st.write(agent)
         # TODO: add support for other file types
         #     text=read_pdf(uploaded_file)
         # elif uploaded_file.name.endswith('.txt'):
