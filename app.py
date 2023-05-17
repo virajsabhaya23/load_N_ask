@@ -69,10 +69,10 @@ def main():
     # Upload PDF file
     st.write(f'### 2. b) Upload your {file_type} file')
     if file_type.lower().endswith('pdf'):
-        # uploaded_file = st.file_uploader('Upload your PDF file', type=['pdf'], label_visibility="collapsed")
+        uploaded_file = st.file_uploader('Upload your PDF file', type=['pdf'], label_visibility="collapsed")
         st.write(uploaded_file)
     elif file_type.lower().endswith('csv'):
-        # uploaded_file = st.file_uploader('Upload your CSV file', type=['csv'], label_visibility="collapsed")
+        uploaded_file = st.file_uploader('Upload your CSV file', type=['csv'], label_visibility="collapsed")
         st.write(uploaded_file)
     else:
         uploaded_file = None
