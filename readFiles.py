@@ -11,3 +11,6 @@ def read_pdf(userFile):
     for page in pdf_reader.pages:
         text += page.extract_text()
     return text
+
+def read_csv():
+    pass
