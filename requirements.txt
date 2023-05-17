@@ -6,3 +6,5 @@ requests
 openai
 tiktoken
 docx2txt
+re
+BytesIO
