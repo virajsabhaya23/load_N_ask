@@ -1,6 +1,5 @@
 import streamlit as st
 import re
-import docx2txt
 from io import BytesIO
 from PyPDF2 import PdfReader
 
